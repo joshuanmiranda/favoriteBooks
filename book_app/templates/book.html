@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/book_app_style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <a href="/logout">Logout</a>
+        </div>
+        <div>
+            <h2>Welcome, {{user.first_name}}!</h2>
+        </div>
+        <div class="form-group">
+            <form action="/books/create" method="POST">
+                {% csrf_token %}
+                <h4>Add a Favorite Book</h4>
+                <label for="title">Title:</label>
+                <input class="form-control" type="text" name="title" id="title">
+                <label for="description">Description:</label>
+                <textarea class="form-control" name="description" id="description" cols="30" rows="10"></textarea>
+                <button type="submit" class="btn btn-outline-dark">Add</button>
+            </form>
+        </div>
+        <div>
+            <h4>All Books</h4>
+            {% for book in allBooks %}
+            <h5><a href="">book.title</a></h5>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

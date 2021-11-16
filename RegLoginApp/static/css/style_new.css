@@ -1,0 +1,22 @@
+body{
+    background-color: lightsteelblue;
+}
+
+/*#wrapper{
+    margin: 40px;
+    display: flex;
+}
+
+.btn{
+    margin: 20px 0px;
+}
+
+.main{
+    display: block;
+    margin: 60px;
+    width: 50%;
+}
+
+.messages {
+    color: red;
+}

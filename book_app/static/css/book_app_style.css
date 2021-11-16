@@ -1,0 +1,30 @@
+body{
+    background-color: lightsteelblue;
+}
+
+/*#wrapper{
+    margin: 40px;
+    display: flex;
+}
+
+.btn{
+    margin: 20px 0px;
+}
+
+.main{
+    display: block;
+    margin: 60px;
+    width: 100%;
+}
+
+.messages {
+    color: red;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
