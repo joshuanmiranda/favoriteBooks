@@ -11,5 +11,9 @@ def index(request):
     }
     return render(request, 'book.html', context)
 
-#def create(request):
-    #if request.method=="POST":
+def create(request):
+    if request.method=="POST":
+        loggedUser = User.objects.get(id=request.session['user'])
+        newBook = Book.objects.create(title=request.POST['title'], description=request.POST['description'], uploaded_by=loggedUser)
+        return redirect('/books')
+    return redirect('/books')

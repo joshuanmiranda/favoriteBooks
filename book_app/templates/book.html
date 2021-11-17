@@ -31,7 +31,8 @@
         <div>
             <h4>All Books</h4>
             {% for book in allBooks %}
-            <h5><a href="">book.title</a></h5>
+            <h5><a href="">{{book.title}}</a></h5>
+            <h5>(Added by {{newBook.uploaded_by.first_name}} {{newBook.uploaded_by.last_name}})</h5>
             {% endfor %}
         </div>
     </div>
